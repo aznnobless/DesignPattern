@@ -1,11 +1,25 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DesignPattern.Behavioral.ChainOfResponsibility.BatchSystem;
 using DesignPattern.Behavioral.ChainOfResponsibility.SimpleCase;
+using DesignPattern.Behavioral.Iterator.Simple;
 
 Console.WriteLine("Hello, World!");
 
 ChainOfResponsibilityBatchSystem();
 
+
+void RunSimpleIteratorCase()
+{
+
+    int[] numbers = { 1, 2, 3, 4, 5 };
+
+    MyCollection collection = new MyCollection(numbers);
+
+    foreach (var item in collection)
+    {
+        Console.WriteLine(item);
+    }
+}
 
 void ChainOfResponsibilityBatchSystem()
 {
