@@ -49,4 +49,3 @@ namespace DesignPattern.Behavioral.Iterator.Simple
         }
     }
 }
-}
