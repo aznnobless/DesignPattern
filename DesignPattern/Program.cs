@@ -2,10 +2,28 @@
 using DesignPattern.Behavioral.ChainOfResponsibility.BatchSystem;
 using DesignPattern.Behavioral.ChainOfResponsibility.SimpleCase;
 using DesignPattern.Behavioral.Iterator.Simple;
+using DesignPattern.Behavioral.Strategy.Simple;
 
 Console.WriteLine("Hello, World!");
+RunStrategyCase();
+//ChainOfResponsibilityBatchSystem();
 
-ChainOfResponsibilityBatchSystem();
+
+void RunStrategyCase()
+{
+    var data = new List<int>{ 5,3,8,4,2 };
+
+    var sortService = new SortService();
+
+    sortService.SetStrategy(new MergeSortStrategy());
+
+    sortService.ExecuteSort(data);
+
+    foreach(var item in data)
+    {
+        Console.WriteLine(item);
+    }
+}
 
 
 void RunSimpleIteratorCase()
